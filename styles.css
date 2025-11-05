@@ -82,6 +82,7 @@ body {
     padding: 10px 0;
     font-size: 14px;
     text-align: center;
+    width: 100%;
 }
 
 .banner-content {
@@ -104,6 +105,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
 }
 
 .header-container {
@@ -270,10 +272,14 @@ body {
     text-align: center;
 }
 
-/* Navigation Bar */
+/* ============================================
+   Navigation Bar - FULL WIDTH FIX
+   ============================================ */
 .nav-bar {
     background: var(--secondary-color);
-    padding: 0 20px;
+    padding: 0;
+    width: 100%;
+    margin: 0;
 }
 
 .nav-container {
@@ -281,6 +287,7 @@ body {
     gap: 30px;
     max-width: 1400px;
     margin: 0 auto;
+    padding: 0 20px;
     overflow-x: auto;
 }
 
