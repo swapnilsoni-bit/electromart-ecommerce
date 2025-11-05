@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FIXED: Changed to styles.css -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>ElectroMart - Premium Electronics Components</title>
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <div class="banner-content">
+            <i class="fas fa-truck"></i>
+            <span>Free Shipping on Orders Over ₹999 | Exclusive Offers Available</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <button class="menu-btn" id="menuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="logo">
+                    <i class="fas fa-bolt"></i>
+                    <span>ElectroMart</span>
+                </div>
+            </div>
+
+            <div class="search-section">
+                <div class="search-container">
+                    <select class="search-category">
+                        <option value="all">All Categories</option>
+                        <option value="boards">Boards & Programmers</option>
+                        <option value="sensors">Sensors & Modules</option>
+                        <option value="ics">ICs & Components</option>
+                        <option value="tools">Tools & Connectors</option>
+                    </select>
+                    <input type="text" class="search-input" placeholder="Search for products, components, and more..." id="searchInput">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-actions">
+                <div class="action-item">
+                    <i class="far fa-user"></i>
+                    <div class="action-text">
+                        <span class="action-subtitle">Hello, Sign in</span>
+                        <span class="action-title">Account</span>
+                    </div>
+                </div>
+                <div class="action-item">
+                    <i class="far fa-heart"></i>
+                    <div class="action-text">
+                        <span class="action-subtitle">Your</span>
+                        <span class="action-title">Wishlist</span>
+                    </div>
+                </div>
+                <div class="action-item cart-item">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                    <div class="action-text">
+                        <span class="action-title">Cart</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav-bar">
+            <div class="nav-container">
+                <a href="#" class="nav-link"><i class="fas fa-tags"></i> Today's Deals</a>
+                <a href="#" class="nav-link"><i class="fas fa-fire"></i> Best Sellers</a>
+                <a href="#" class="nav-link"><i class="fas fa-star"></i> New Arrivals</a>
+                <a href="#" class="nav-link"><i class="fas fa-microchip"></i> Arduino & Raspberry Pi</a>
+                <a href="#" class="nav-link"><i class="fas fa-tools"></i> Tools & Equipment</a>
+                <a href="#" class="nav-link"><i class="fas fa-percent"></i> Special Offers</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2><i class="fas fa-user-circle"></i> Hello, Sign in</h2>
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="sidebar-content">
+            <div class="sidebar-section">
+                <h3>Digital Content & Devices</h3>
+                <ul class="sidebar-menu">
+                    <li><span>ElectroMart Components</span> <i class="fas fa-chevron-right"></i></li>
+                    <li><span>ICs and Meters</span> <i class="fas fa-chevron-right"></i></li>
+                    <li><span>1 Day Delivery</span> <i class="fas fa-chevron-right"></i></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Shop By Department</h3>
+                <ul class="sidebar-menu">
+                    <li><span>Electronics</span> <i class="fas fa-chevron-right"></i></li>
+                    <li><span>Sensors and Modules</span> <i class="fas fa-chevron-right"></i></li>
+                    <li><span>Tools and Connectors</span> <i class="fas fa-chevron-right"></i></li>
+                    <li><span>Multimeters</span> <i class="fas fa-chevron-right"></i></li>
+                    <li><span>Display Devices</span> <i class="fas fa-chevron-right"></i></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Programs & Features</h3>
+                <ul class="sidebar-menu">
+                    <li><span>Gift Cards</span> <i class="fas fa-chevron-right"></i></li>
+                    <li><span>ElectroMart Pay</span> <i class="fas fa-chevron-right"></i></li>
+                    <li><span>Sell on ElectroMart</span> <i class="fas fa-chevron-right"></i></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Help & Settings</h3>
+                <ul class="sidebar-menu">
+                    <li><span>Your Account</span> <i class="fas fa-chevron-right"></i></li>
+                    <li><span>Customer Service</span> <i class="fas fa-chevron-right"></i></li>
+                    <li><span>Sign Out</span> <i class="fas fa-chevron-right"></i></li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Premium Electronics Components</h1>
+            <p>Discover the latest Arduino boards, Raspberry Pi, sensors, and more</p>
+            <button class="hero-btn">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="featured-categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Boards & Programmers</h3>
+                    <p>Arduino, Raspberry Pi, ESP32</p>
+                    <a href="#boards" class="category-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-satellite-dish"></i>
+                    </div>
+                    <h3>Sensors & Modules</h3>
+                    <p>Temperature, Motion, WiFi</p>
+                    <a href="#sensors" class="category-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3>Display Devices</h3>
+                    <p>LCD, OLED, TFT Screens</p>
+                    <a href="#displays" class="category-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Tools & Equipment</h3>
+                    <p>Multimeters, Soldering, Pliers</p>
+                    <a href="#tools" class="category-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Boards & Programmers -->
+    <section class="product-section" id="boards">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Boards & Programmers</h2>
+                <a href="#" class="see-all">See all <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="product-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1553406830-ef2513450d76?w=400&h=400&fit=crop" alt="Raspberry Pi">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Single Board Computer</div>
+                        <h3 class="product-name">Raspberry Pi 4 Model B</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹4,999</span>
+                            <span class="price-original">₹5,999</span>
+                            <span class="price-discount">17% off</span>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <div class="product-badge sale">Sale</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&h=400&fit=crop" alt="Arduino">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Microcontroller Board</div>
+                        <h3 class="product-name">Arduino Uno R3</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹799</span>
+                            <span class="price-original">₹1,299</span>
+                            <span class="price-discount">38% off</span>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <div class="product-badge new">New</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1608564697071-ddf911d81370?w=400&h=400&fit=crop" alt="ESP32">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">WiFi Module</div>
+                        <h3 class="product-name">ESP32 Development Board</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹599</span>
+                            <span class="price-original">₹899</span>
+                            <span class="price-discount">33% off</span>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=400&fit=crop" alt="BeagleBone">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Single Board Computer</div>
+                        <h3 class="product-name">BeagleBone Black</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹5,499</span>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Banner -->
+    <section class="promo-banner">
+        <div class="container">
+            <div class="promo-content">
+                <div class="promo-text">
+                    <h2>Special Offer on Sensor Kits</h2>
+                    <p>Get 40% off on complete sensor kits. Limited time offer!</p>
+                    <button class="promo-btn">Shop Sensor Kits</button>
+                </div>
+                <div class="promo-image">
+                    <i class="fas fa-satellite-dish"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sensors & Modules -->
+    <section class="product-section" id="sensors">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sensors & Modules</h2>
+                <a href="#" class="see-all">See all <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-badge">Trending</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=400&fit=crop" alt="Temperature Sensor">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Temperature Sensor</div>
+                        <h3 class="product-name">DHT22 Temperature & Humidity</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.8)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹299</span>
+                            <span class="price-original">₹499</span>
+                            <span class="price-discount">40% off</span>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=400&h=400&fit=crop" alt="Ultrasonic Sensor">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Distance Sensor</div>
+                        <h3 class="product-name">HC-SR04 Ultrasonic Sensor</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.2)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹149</span>
+                            <span class="price-original">₹249</span>
+                            <span class="price-discount">40% off</span>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge new">New</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=400&h=400&fit=crop" alt="PIR Sensor">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Motion Sensor</div>
+                        <h3 class="product-name">PIR Motion Detection Module</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.6)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹199</span>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge sale">Sale</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=400&fit=crop" alt="Gas Sensor">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Gas Sensor</div>
+                        <h3 class="product-name">MQ-2 Gas Sensor Module</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.3)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹179</span>
+                            <span class="price-original">₹299</span>
+                            <span class="price-discount">40% off</span>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Display Devices -->
+    <section class="product-section" id="displays">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Display Devices</h2>
+                <a href="#" class="see-all">See all <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=400&h=400&fit=crop" alt="LCD Display">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">LCD Display</div>
+                        <h3 class="product-name">16x2 LCD Display Module</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.7)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹249</span>
+                            <span class="price-original">₹399</span>
+                            <span class="price-discount">38% off</span>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">Premium</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1593642532400-2682810df593?w=400&h=400&fit=crop" alt="OLED Display">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">OLED Display</div>
+                        <h3 class="product-name">0.96" OLED Display 128x64</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹399</span>
+                            <span class="price-original">₹599</span>
+                            <span class="price-discount">33% off</span>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1527430253228-e93688616381?w=400&h=400&fit=crop" alt="TFT Display">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">TFT Display</div>
+                        <h3 class="product-name">3.5" TFT LCD Touch Screen</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.1)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹899</span>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge new">New</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=400&fit=crop" alt="E-Ink Display">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">E-Ink Display</div>
+                        <h3 class="product-name">2.9" E-Paper Display Module</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹1,299</span>
+                            <span class="price-original">₹1,799</span>
+                            <span class="price-discount">28% off</span>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools & Equipment -->
+    <section class="product-section" id="tools">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tools & Equipment</h2>
+                <a href="#" class="see-all">See all <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-badge">Bestseller</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=400&fit=crop" alt="Digital Multimeter">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Testing Equipment</div>
+                        <h3 class="product-name">Digital Multimeter DT-830B</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.6)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹349</span>
+                            <span class="price-original">₹599</span>
+                            <span class="price-discount">42% off</span>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=400&fit=crop" alt="Soldering Iron">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Soldering Tool</div>
+                        <h3 class="product-name">60W Soldering Iron Kit</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.3)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹499</span>
+                            <span class="price-original">₹799</span>
+                            <span class="price-discount">38% off</span>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=400&h=400&fit=crop" alt="Wire Stripper">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Hand Tools</div>
+                        <h3 class="product-name">Professional Wire Stripper</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.8)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹299</span>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge sale">Sale</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?w=400&h=400&fit=crop" alt="Breadboard">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Prototyping</div>
+                        <h3 class="product-name">830 Point Breadboard Kit</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.4)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₹149</span>
+                            <span class="price-original">₹249</span>
+                            <span class="price-discount">40% off</span>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Free Shipping</h3>
+                    <p>On orders over ₹999</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3>Easy Returns</h3>
+                    <p>30-day return policy</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Dedicated customer service</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Payment</h3>
+                    <p>100% secure transactions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Stay Updated</h2>
+                    <p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+                </div>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" class="newsletter-input">
+                    <button class="newsletter-btn">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-bolt"></i>
+                        <span>ElectroMart</span>
+                    </div>
+                    <p>Your trusted destination for premium electronics components and development boards.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#boards">Boards & Programmers</a></li>
+                        <li><a href="#sensors">Sensors & Modules</a></li>
+                        <li><a href="#displays">Display Devices</a></li>
+                        <li><a href="#tools">Tools & Equipment</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 ElectroMart. Designed by Swapnil Soni. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-amex"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
